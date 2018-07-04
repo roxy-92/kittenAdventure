@@ -11,11 +11,13 @@ var limit_right = 0
 var limit_up = 0
 var limit_down = 0
 var limit_plus = 100
+# Posición y de la cámara, pues se mueve.
+var cameraPosition_y = 0
 # Obtención del sprite gatito
 onready var gatito = $sprite_gatito
 
 # Función que se ejecuta primero nada mas arrancar el juego
-func _ready():
+func _ready():	
 	# Obtención del tamaño de la ventana
 	screen_size = get_viewport_rect().size
 	# Inicialización de los límites del movimiento del gatito en la pantalla.
@@ -24,11 +26,12 @@ func _ready():
 	limit_left = limit_plus
 	limit_right = screen_size.x - limit_plus
 	# Se reinicia la posición del gatito al comenzar
-	restart_position()
+	self.position =  Vector2(512,400)
 	set_process(true)
 	
 func _physics_process(delta):
-	
+	cameraPosition_y = get_parent().get_node("Camera2D").get_camera_position().y
+	limit_down = start_position.y + cameraPosition_y
 	# Controles, movimiento del personaje
 	if Input.is_action_pressed("ui_right"):  # Si pulsa tecla derecha
 		motion = Vector2(0,0) # Pongo primero todo el movimiento a 0 para evitar conflictos
@@ -60,8 +63,8 @@ func _physics_process(delta):
 		gatito.flip_h = false
 		gatito.play("Run")
 		# Comprobación del límite hacia arriba
-		if(self.position.y <= limit_up):
-			self.position.y = limit_up
+		#if(self.position.y <= limit_up):
+		#	self.position.y = limit_up
 		
 	elif Input.is_action_pressed("ui_down"):  # Si pulsa tecla abajo
 		motion = Vector2(0,0)
@@ -70,14 +73,16 @@ func _physics_process(delta):
 		gatito.flip_v = true
 		gatito.flip_h = false
 		gatito.play("Run")
-		# Comprobación del límite hacia abajo
-		if(self.position.y >= limit_down):
-			self.position.y = limit_down
+	# Comprobación del límite hacia abajo
+	elif self.position.y >= limit_down:
+		gatito.play("Run")
+		self.position.y = limit_down
 	# En cualquier otro caso el gatito se quedará quieto y su movimiento pasará a 0 + animacion descanso
 	else:
 		gatito.play("Idle")
 		motion.y = 0
 		motion.x = 0
+		
 	# Si el gatito se choca con un obstáculo
 	collision = move_and_collide(motion * delta)
 	if collision:
@@ -85,5 +90,5 @@ func _physics_process(delta):
 	
 # Reinicia al gatito en la posición de inicio y en postura quieto
 func restart_position():
-		self.position = start_position
+		self.position = Vector2(start_position.x, start_position.y + cameraPosition_y)
 		gatito.play("Idle")
