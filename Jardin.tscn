@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Jardin.gd" type="Script" id=1]
 [ext_resource path="res://gatito.gd" type="Script" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://Sprites/run_side_1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/run_side_2.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/rock.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/bush.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/water.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/bush.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -76,7 +77,8 @@ _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 [node name="roca" type="StaticBody2D" parent="obstaculos" index="0"]
 
 editor/display_folded = true
-position = Vector2( 594.455, 363.758 )
+position = Vector2( 689.381, 363.859 )
+scale = Vector2( 1.20804, 1.18604 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -90,22 +92,53 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="obstaculos/roca" index="0"]
 
-position = Vector2( 8.10957, 5.91943 )
-scale = Vector2( 0.213098, 0.218982 )
+position = Vector2( -1.29931, -1.87854 )
+scale = Vector2( 0.158395, 0.16768 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/roca" index="1"]
 
-position = Vector2( 13.2976, 8.44392 )
-scale = Vector2( 0.878113, 0.922299 )
+position = Vector2( 2.38031, -1.14185 )
+scale = Vector2( 0.741503, 0.710034 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="arbusto" type="StaticBody2D" parent="obstaculos" index="1"]
+[node name="lago" type="StaticBody2D" parent="obstaculos" index="1"]
 
 editor/display_folded = true
-position = Vector2( 354.399, 331.962 )
+position = Vector2( 521.697, 257.345 )
+scale = Vector2( 1.2971, 1.23805 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="obstaculos/lago" index="0"]
+
+position = Vector2( 2.17389, 2.32656 )
+scale = Vector2( 0.175767, 0.19368 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/lago" index="1"]
+
+position = Vector2( 2.34947, 1.50029 )
+scale = Vector2( 0.87271, 0.788837 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="arbusto" type="StaticBody2D" parent="obstaculos" index="2"]
+
+editor/display_folded = true
+position = Vector2( 350.445, 329.243 )
+scale = Vector2( 1.12356, 1.08497 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -119,15 +152,15 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="obstaculos/arbusto" index="0"]
 
-position = Vector2( -9.64549, -1.65904 )
-scale = Vector2( 0.223166, 0.246777 )
-texture = ExtResource( 9 )
+position = Vector2( -4.30549, 6.18487 )
+scale = Vector2( 0.168369, 0.197753 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstaculos/arbusto" index="1"]
 
-position = Vector2( -5.29984, -3.05084 )
-scale = Vector2( 1.03417, 1.07085 )
+position = Vector2( 0.838318, 3.1795 )
+scale = Vector2( 0.898288, 0.916326 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
