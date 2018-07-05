@@ -40,6 +40,9 @@ func _ready():
 	set_process(true)
 	
 func _physics_process(delta):
+	
+	get_parent().get_parent().get_node("CanvasLayer/GUI/lives").text = String(life)
+	
 	var speed = self.kitten_speed * delta;
 	cameraPosition_y = get_parent().get_node("Camera2D").get_camera_position().y
 	limit_down = start_position.y + cameraPosition_y
