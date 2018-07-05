@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/bush.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32.5902, 34.4109 )
+
+[node name="arbusto" type="StaticBody2D" index="0"]
+
+editor/display_folded = true
+position = Vector2( 689.102, 329.636 )
+scale = Vector2( 1.12356, 1.08497 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( -4.30549, 6.18487 )
+scale = Vector2( 0.168369, 0.197753 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0.838318, 3.1795 )
+scale = Vector2( 0.898288, 0.916326 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+
