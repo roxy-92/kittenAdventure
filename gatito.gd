@@ -34,7 +34,7 @@ func _ready():
 	limit_down = screen_size.y - limit_plus
 	limit_up = limit_plus
 	limit_left = limit_plus
-	limit_right = screen_size.x - limit_plus
+	limit_right = 1024 - limit_plus
 	# Se reinicia la posición del gatito al comenzar
 	self.position =  Vector2(512,400)
 	set_process(true)

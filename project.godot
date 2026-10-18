@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Demo_Kitten"
-run/main_scene="res://Jardin.tscn"
+run/main_scene="res://StartScreen.tscn"
 config/icon="res://icon.png"
 
 [rendering]
