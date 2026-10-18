@@ -1,26 +1,22 @@
 # Kitten Adventure
 
-A small 2D game created with Godot in 2018 as my first video game project.
+A small 2D game created with Godot Engine in 2018 as my first video game project.
 
-## Quick Start Guide
+## Play the Game
 
-### Requirements
+**[Play Kitten Adventure on itch.io](YOUR-ITCH-IO-LINK)**
 
-- Godot Engine **3.0.4** (64-bit Windows version)
-- The `kittenAdventure` project folder
+## About the Project
 
-### How to Open the Game
+Kitten Adventure was created as a learning project while exploring 2D game development with Godot. It represents an early step in my journey into game development.
 
-1. Download `Godot_v3.0.4-stable_win64.exe`.
-2. Download or clone the `kittenAdventure` repository.
-3. Place both in a folder named `Godot` or another folder of your choice.
-4. Run `Godot_v3.0.4-stable_win64.exe`.
-5. In the Godot Project Manager, click **Scan** to locate the `kittenAdventure` project folder.
-6. Select the project and open it.
-7. You can now explore the source code and run the game.
+## Source Code
 
-### About the Project
+The source code is available in this repository for anyone interested in exploring how the game was made.
 
-This project was created in 2018 as a learning exercise while exploring 2D game development with Godot.
+If you're new to Godot, feel free to use this project as a starting point to experiment with the engine, explore its scenes and scripts, and try your own modifications or improvements.
 
-The original Spanish tutorial, *Tutorial Godot: Mi Primer Videojuego*, documents the development process step by step.
+## Learning Resources
+
+The game was originally developed while following the Spanish tutorial *Tutorial Godot: Mi Primer Videojuego*, which documents the development process step by step.
+
