@@ -4,9 +4,11 @@ A small 2D game created with Godot Engine in 2018 as my first video game project
 
 ## Play the Game
 
-**[Kitten Adventure on itch.io](https://roxy-gaming.itch.io/kitten-adventure)**
+```html
+<iframe frameborder="0" src="https://itch.io/embed/5180636" width="552" height="167"><a href="https://roxy-gaming.itch.io/kitten-adventure">Kitten Adventure (2018) by Roxy</a></iframe>
+```
 
-You can also visit the [itch.io project page](https://roxy-gaming.itch.io/kitten-adventure) for updates and more information.
+**[Visit Kitten Adventure on itch.io](https://roxy-gaming.itch.io/kitten-adventure)**
 
 ## About the Project
 
