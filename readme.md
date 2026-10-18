@@ -1,14 +1,26 @@
-Perdonad que nos retrasemos, crear un tutorial lleva bastante tiempo pero os lo subiremos en la carpeta indicada a continuación.
+# Kitten Adventure
 
-[Carpeta compartida en Google Drive](https://drive.google.com/open?id=1ComlvSI6ME-vz8EHY-aK8L9ABY0lQuQg)
+A small 2D game created with Godot in 2018 as my first video game project.
 
-# Guía rápida 
+## Quick Start Guide
 
-- Descargar el archivo Godot_v3.0.4-stable_win64.exe en vuestros ordenadores.
-- Descargar la carpeta kittenAdventure.
-- Guardar ambas cosas en una carpeta llamada Godot (donde queráis, puede ser en escritorio, mis documentos….)
-- Abrimos el documento pdf (TUTORIAL GODOT - MI PRIMER VIDEOJUEGO) si queremos crear nuestro juego desde cero.
-- Ejecutamos el archivo Godot_v3.0.4-stable_win64.exe 
-- Se abrirá el programa. Vamos a pinchar en Scan, para buscar la carpeta kittenAdventure.
-- Abrimos el juego.
-- Podemos ver el código y jugar.
+### Requirements
+
+- Godot Engine **3.0.4** (64-bit Windows version)
+- The `kittenAdventure` project folder
+
+### How to Open the Game
+
+1. Download `Godot_v3.0.4-stable_win64.exe`.
+2. Download or clone the `kittenAdventure` repository.
+3. Place both in a folder named `Godot` or another folder of your choice.
+4. Run `Godot_v3.0.4-stable_win64.exe`.
+5. In the Godot Project Manager, click **Scan** to locate the `kittenAdventure` project folder.
+6. Select the project and open it.
+7. You can now explore the source code and run the game.
+
+### About the Project
+
+This project was created in 2018 as a learning exercise while exploring 2D game development with Godot.
+
+The original Spanish tutorial, *Tutorial Godot: Mi Primer Videojuego*, documents the development process step by step.
