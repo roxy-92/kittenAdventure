@@ -8,7 +8,7 @@ A small 2D game created with Godot Engine in 2018 as my first video game project
   <tr>
     <td width="180">
       <a href="https://roxy-gaming.itch.io/kitten-adventure">
-        <img src="Sprites/gatito.png" width="180" alt="Kitten Adventure gameplay">
+        <img src="Sprites/preview.png" width="180" alt="Kitten Adventure gameplay">
       </a>
     </td>
     <td>
