@@ -4,7 +4,7 @@ A small 2D game created with Godot Engine in 2018 as my first video game project
 
 ## Play the Game
 
-**[Play Kitten Adventure on itch.io](YOUR-ITCH-IO-LINK)**
+**[Play Kitten Adventure on itch.io](https://roxy-gaming.itch.io/kitten-adventure)**
 
 ## About the Project
 
@@ -19,4 +19,3 @@ If you're new to Godot, feel free to use this project as a starting point to exp
 ## Learning Resources
 
 The game was originally developed while following the Spanish tutorial *Tutorial Godot: Mi Primer Videojuego*, which documents the development process step by step.
-
