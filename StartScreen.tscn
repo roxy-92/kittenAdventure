@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://StartScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/idle.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/run_side_2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/arrow_keys.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/roxyfont.ttf" type="DynamicFontData" id=5]
 
@@ -21,6 +21,14 @@ use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 5 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="StartScreen" type="Control" index="0"]
 
@@ -57,11 +65,12 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 2 )
+stretch_mode = 0
 _sections_unfolded = [ "Hint" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 297.316, 261.604 )
+position = Vector2( -128.709, 212.494 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
@@ -72,11 +81,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -233.0
-margin_top = 112.0
-margin_right = 1303.0
-margin_bottom = 1136.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 123.0
+margin_top = 128.0
+margin_right = 1659.0
+margin_bottom = 1152.0
+rect_scale = Vector2( 0.2, 0.2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -84,6 +93,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
+stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Title" type="Label" parent="." index="3"]
@@ -115,10 +125,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -141.0
-margin_top = 450.0
-margin_right = 128.0
-margin_bottom = 568.0
+margin_left = -29.0
+margin_top = 470.0
+margin_right = 163.0
+margin_bottom = 552.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -134,6 +144,32 @@ group = null
 text = "START"
 flat = false
 align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Label" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -400.0
+margin_top = 340.0
+margin_right = 488.0
+margin_bottom = 521.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Every obstacle you hit will take one fish away.
+Collect five fishes to finish the game!
+Avoid obstacles and collect fish to reach your goal"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
