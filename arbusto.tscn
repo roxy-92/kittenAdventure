@@ -9,7 +9,6 @@ extents = Vector2( 32.5902, 34.4109 )
 
 [node name="arbusto" type="StaticBody2D" index="0"]
 
-editor/display_folded = true
 position = Vector2( 689.102, 329.636 )
 scale = Vector2( 1.12356, 1.08497 )
 input_pickable = false
@@ -32,8 +31,8 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0.838318, 3.1795 )
-scale = Vector2( 0.898288, 0.916326 )
+position = Vector2( -1.68487, 4.58703 )
+scale = Vector2( 0.611067, 0.571904 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Visibility" ]
 

@@ -1,34 +1,52 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Jardin.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/life_full.png" type="Texture" id=2]
-[ext_resource path="res://gatito.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/idle.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/run_1.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/run_2.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/run_side_1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/run_side_2.png" type="Texture" id=8]
-[ext_resource path="res://Camera2D.gd" type="Script" id=9]
-[ext_resource path="res://BG.gd" type="Script" id=10]
-[ext_resource path="res://Sprites/bg.png" type="Texture" id=11]
-[ext_resource path="res://lago.tscn" type="PackedScene" id=12]
-[ext_resource path="res://arbusto.tscn" type="PackedScene" id=13]
-[ext_resource path="res://roca.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Sprites/Candara.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/roxyfont.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://gatito.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/idle.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/run_1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/run_2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/run_side_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/run_side_2.png" type="Texture" id=10]
+[ext_resource path="res://Camera2D.gd" type="Script" id=11]
+[ext_resource path="res://BG.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/bg.png" type="Texture" id=13]
+[ext_resource path="res://lago.tscn" type="PackedScene" id=14]
+[ext_resource path="res://arbusto.tscn" type="PackedScene" id=15]
+[ext_resource path="res://roca.tscn" type="PackedScene" id=16]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 100
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Run_Side",
 "speed": 5.0
@@ -39,7 +57,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 32.7724, 33.9555 )
 
-[node name="jardin" type="Node" index="0"]
+[node name="jardin" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -135,6 +153,73 @@ texture = ExtResource( 2 )
 stretch_mode = 3
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
+[node name="TimerLabel" type="Label" parent="CanvasLayer/GUI" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -150.0
+margin_top = -50.0
+margin_right = -110.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Size Flags", "custom_colors", "custom_fonts" ]
+
+[node name="VictoryOverlay" type="ColorRect" parent="CanvasLayer/GUI" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -662.0
+margin_top = -108.0
+margin_right = 429.0
+margin_bottom = 562.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.013916, 0, 0.09375, 0.596706 )
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="VictoryLabel" type="Label" parent="CanvasLayer/GUI" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -300.0
+margin_top = 180.0
+margin_right = 123.0
+margin_bottom = 265.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "YOU DID IT!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts", "custom_styles" ]
+
 [node name="map" type="Control" parent="." index="1"]
 
 anchor_left = 0.0
@@ -160,7 +245,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Collision", "collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -176,7 +261,8 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map/gatito" index="1"]
 
-position = Vector2( -4.01666, -2.84894 )
+position = Vector2( -5.52642, -3.085 )
+scale = Vector2( 0.545024, 0.766288 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Material", "Transform", "Z Index" ]
 
@@ -211,7 +297,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing" ]
 
 [node name="BG" type="ParallaxBackground" parent="map" index="2"]
@@ -228,7 +314,7 @@ scroll_base_scale = Vector2( 1, 1 )
 scroll_limit_begin = Vector2( 0, 0 )
 scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = false
-script = ExtResource( 10 )
+script = ExtResource( 12 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="background" type="ParallaxLayer" parent="map/BG" index="0"]
@@ -242,7 +328,7 @@ _sections_unfolded = [ "Material", "Motion", "Pause", "Transform", "Visibility",
 
 position = Vector2( 515.034, 0.392761 )
 scale = Vector2( 1.02363, 1 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 offset = Vector2( 0, 300 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 600 )
@@ -254,20 +340,20 @@ __meta__ = {
 
 [node name="obstaculos" type="Node" parent="." index="2"]
 
-[node name="lago" parent="obstaculos" index="0" instance=ExtResource( 12 )]
+[node name="lago" parent="obstaculos" index="0" instance=ExtResource( 14 )]
 
-position = Vector2( 966.528, 433.595 )
-scale = Vector2( 1.78762, 1.68609 )
+position = Vector2( 835.889, 386.407 )
+scale = Vector2( 2.08387, 1.99697 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="arbusto" parent="obstaculos" index="1" instance=ExtResource( 13 )]
+[node name="arbusto" parent="obstaculos" index="1" instance=ExtResource( 15 )]
 
-position = Vector2( 32.9587, 251.401 )
-scale = Vector2( 1.6302, 1.5327 )
+position = Vector2( 148.252, 211.996 )
+scale = Vector2( 1.61963, 1.49163 )
 
-[node name="roca" parent="obstaculos" index="2" instance=ExtResource( 14 )]
+[node name="roca" parent="obstaculos" index="2" instance=ExtResource( 16 )]
 
-position = Vector2( 1007.72, 108.894 )
+position = Vector2( 741.087, 125.218 )
 scale = Vector2( 1.01089, 1.02672 )
 
 [connection signal="timeout" from="map/gatito/DamageTimer" to="map/gatito" method="_on_DamageTimer_timeout"]

@@ -1,33 +1,31 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://StartScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/bg.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/run_side_2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/04.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/arrow_keys.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/roxyfont.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Kitten Adventure Logo.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/roxyfont.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Sprites/Candara.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/life.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/bush.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/rock.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/water.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 100
+size = 69
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 50
+size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 40
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 5 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="StartScreen" type="Control" index="0"]
@@ -70,8 +68,8 @@ _sections_unfolded = [ "Hint" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( -128.709, 212.494 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( -371.401, 425.577 )
+scale = Vector2( 0.561481, 0.540567 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
@@ -81,10 +79,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 123.0
-margin_top = 128.0
-margin_right = 1659.0
-margin_bottom = 1152.0
+margin_left = 219.0
+margin_top = 355.0
+margin_right = 1755.0
+margin_bottom = 1379.0
 rect_scale = Vector2( 0.2, 0.2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -96,27 +94,25 @@ texture = ExtResource( 4 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="Title" type="Label" parent="." index="3"]
+[node name="Title" type="TextureRect" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -294.0
-margin_top = 7.0
-margin_right = 411.0
-margin_bottom = 92.0
+margin_left = -399.0
+margin_top = -41.0
+margin_right = 1773.0
+margin_bottom = 683.0
+rect_scale = Vector2( 0.4, 0.4 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "KITTEN ADVENTURE"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="StartButton" type="Button" parent="." index="4"]
@@ -125,10 +121,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -29.0
-margin_top = 470.0
-margin_right = 163.0
-margin_bottom = 552.0
+margin_left = -98.0
+margin_top = 472.0
+margin_right = 94.0
+margin_bottom = 558.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -136,7 +132,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -144,33 +140,149 @@ group = null
 text = "START"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Label" type="Label" parent="." index="5"]
 
+modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -400.0
-margin_top = 340.0
-margin_right = 488.0
-margin_bottom = 521.0
+margin_left = -184.0
+margin_top = 189.0
+margin_right = 185.0
+margin_bottom = 426.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-text = "Every obstacle you hit will take one fish away.
-Collect five fishes to finish the game!
-Avoid obstacles and collect fish to reach your goal"
+custom_fonts/font = SubResource( 2 )
+text = "Obstacles hurt!
+
+
+Fishes heal!"
 align = 1
+valign = 1
+autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Material", "Visibility", "custom_fonts", "custom_styles" ]
+
+[node name="Label2" type="Label" parent="." index="6"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 281.0
+margin_top = 215.0
+margin_right = 459.0
+margin_bottom = 386.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Use the arrow keys to move the kitten!"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Visibility", "custom_fonts", "custom_styles" ]
+
+[node name="TextureRect" type="TextureRect" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -61.0
+margin_top = 371.0
+margin_right = 1437.0
+margin_bottom = 1421.0
+rect_scale = Vector2( 0.08, 0.08 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureRect2" type="TextureRect" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -145.0
+margin_top = 273.0
+margin_right = 252.0
+margin_bottom = 592.0
+rect_min_size = Vector2( 0.08, 0.08 )
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureRect3" type="TextureRect" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -45.0
+margin_top = 271.0
+margin_right = 299.0
+margin_bottom = 576.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="TextureRect4" type="TextureRect" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 57.0
+margin_top = 274.0
+margin_right = 375.0
+margin_bottom = 559.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 11 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 
